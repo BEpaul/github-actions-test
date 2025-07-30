@@ -55,5 +55,5 @@ jobs:
         --application-name ${{ vars.APPLICATION_NAME }} \
         --deployment-group-name ${{ vars.DEPLOY_GROUP_NAME }} \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=${{ vars.S3_BUCKET_NAME }},bundleType=zip,key=github-actions-test.zip \ 
+        --s3-location bucket=${{ vars.S3_BUCKET_NAME }},bundleType=zip,key=github-actions-test.zip \
         --region ap-northeast-2

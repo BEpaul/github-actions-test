@@ -33,7 +33,12 @@ jobs:
       run: cp ./build/libs/*.jar ./deploy
 
     - name: Make zip file
-      run: zip -r ./github-actions-test.zip ./deploy
+      run: |
+        cp appspec.yml ./deploy/
+        cp -r scripts ./deploy/
+        cd deploy
+        zip -r ../github-actions-test.zip .
+        cd ..
       shell: bash
 
     - name: Configure AWS credentials
